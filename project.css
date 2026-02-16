@@ -1,896 +1,1016 @@
+:root {
+  /* Using your exact color palette */
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+  --gray-hover: #f0f0f0;
+  --text-dark: #111111;
+  --text-muted: #666666;
+  --border-light: #e0e0e0;
+  --footer-dark: #2b2f32;
+  --footer-accent: #495057;
+  --secondary-muted: #adb5bd;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Segoe UI", Arial, sans-serif; */
-  font-family: "Lora";
-  color: rgb(254, 250, 250);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--brand-black);
 }
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 body {
-  background-color: #2c302f;
+  background-color: var(--brand-white);
   overflow-x: hidden;
 }
 
-/* NAVIGATION BAR */
+/* <-- ================= NAVIGATION BAR ================= --> */
 
 .navbar {
-  width: 100%;
-  height: 70px;
-  background: #f4f5f7;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: var(--brand-white) !important;
 }
 
-/* Logo styling */
-.logo-circle {
-  background-color: #ffffff;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 50%;
-  padding: 0.6rem 0.8rem;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(0, 166, 160, 0.4);
-  transition: transform 0.3s ease;
-}
-.logo-circle:hover {
-  transform: scale(1.1);
+.navbar-brand {
+  color: var(--brand-black) !important;
+  letter-spacing: -1px;
 }
 
-/* Nav links */
-.navtext {
-  display: flex;
-  gap: 100px;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  text-align: center;
+.navbar-nav .nav-link {
+  color: var(--brand-black) !important;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-left: 20px;
+  padding: 5px 10px;
+  transition: all 0.2s ease-in-out;
   position: relative;
+  text-decoration: none !important;
+  padding-bottom: 5px;
 }
 
-.navtext a {
-  text-decoration: none;
-  color: #fcf7f7;
-  font-size: 1.2rem;
-  font-weight: 600;
-  position: relative;
-  transition: color 0.3s ease;
+.navbar-nav .nav-link:hover {
+  background-color: var(--gray-hover);
+  border-radius: 4px;
 }
 
-/* Underline hover animation */
-.navtext a::after {
+.navbar-nav .nav-link::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
+  width: 0;
   height: 2px;
-  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  background-color: var(--brand-black);
   transition: width 0.3s ease;
 }
-.navtext a:hover {
-  color: #ffffff;
-}
-.navtext a:hover::after {
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
   width: 100%;
 }
 
-/* Dropdown */
-.dropdown button {
-  background: transparent;
-  color: #333;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+.navbar-nav .nav-link.active {
+  color: var(--brand-black) !important;
+  border-radius: 4px;
 }
-.dropdown button:hover {
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* <-- ================= SLIDER ================= --> */
+
+/* --- Hero Slider Styling --- */
+.hero-slider-section {
+  background-color: #ffffff;
+}
+/* Custom Small Tech Button */
+.btn-tech-sm {
+  font-size: 0.8rem; /* Smaller font for a premium feel */
+  letter-spacing: 1.2px;
+  border-radius: 8px; /* Keeping the sharp tech edges */
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+}
+
+.btn-tech-sm:hover {
+  background-color: transparent;
+  color: #000;
+  transform: translateY(-2px);
+}
+.para-slider {
+  font-family: "Lora", serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: center; /* Changed from center to left for side-by-side layout */
+}
+
+/* Image styling */
+.imgslide {
+  height: 450px; /* Adjusted to look better next to text */
+  object-fit: cover; /* 'cover' is better than 'contain' for filling the box */
+  background-color: #f8f9fa;
+}
+
+.carousel-inner {
+  border: 2px solid #000; /* Matching your TechVerse theme */
+}
+
+.carousel-item {
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Square buttons for a modern tech feel */
+.slider-controls .btn-dark {
+  width: 45px;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.slider-controls .btn-dark:hover {
+  background-color: var(--brand-black);
+}
+/* Slider Edge Curves */
+.custom-slider-edges {
+  border-radius: 20px; /* Adjust this number for more or less curve */
+  overflow: hidden; /*Important: clips the images to the rounded corners */
+  border: 1px solid #ddd;
+}
+
+.carousel-item {
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Vertical alignment for the paragraph */
+.para-slider {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding-right: 20px;
+  color: #333;
+}
+
+/* Customizing the buttons under the slider */
+.slider-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; /* Makes buttons circular, looks great with curved slider */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.slider-btn:hover {
+  background-color: #444;
   transform: scale(1.1);
 }
-.dropdown-menu {
-  font-size: 0.95rem;
-}
-.dropdown-menu a:hover {
-  background-color: #ffffff;
-  color: white;
-}
 
-/* SLIDER */
+/* <-- ================= CATEGORIES ================= --> */
 
-.imgslider {
-  width: 100%;
-  height: 80vh;
-  margin-top: 25px;
-}
-
-/* CATEGORIES */
-
-.cateboxes {
-  width: 100%;
-  margin-top: 50px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
 .catecards {
-  height: 20vh;
-  width: 11vw;
-  margin-left: 11px;
-  border-radius: 20px;
-  padding: 17px;
-  background-color: white;
-  overflow: hidden;
+  width: 100%;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.catecards:hover {
+  transform: translateY(-8px);
+  border: 1px solid #000000;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .imgcateboxes {
-  height: 17vh;
-  object-fit: cover;
-  overflow: hidden;
-}
-.catecardstext {
-  text-align: center;
-}
-
-/* TOP DEALS */
-
-.boxes3 {
   width: 100%;
-  margin-top: 60px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  background-color: #000;
-  padding: 60px 0;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
 }
+
+/* Slight zoom on the icon when the card is hovered */
+.catecards:hover .imgcateboxes {
+  transform: scale(1.1);
+}
+
+.catecardstext {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111111;
+}
+
+.catecards:hover .imgcateboxes {
+  transform: scale(1.1);
+}
+
+/* <-- ================= TOP DEALS ================= --> */
 
 .threecards {
-  height: auto;
-  width: 27vw;
-  background: #fff;
-  border: 2px solid #000;
-  border-radius: 25px;
+  background: var(--brand-white);
+  border: 1px solid var(--border-light);
+  border-radius: 30px;
   overflow: hidden;
-  position: relative;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
 .threecards:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--brand-black);
 }
 
 .threecards img {
-  width: 90%;
-  height: 54vh;
+  width: 100%;
+  height: 350px;
   object-fit: contain;
-  border-radius: 20px;
-  transition: transform 0.4s ease;
-  padding: 10px;
+  padding: 30px;
+  background-color: var(--brand-white);
+  transition: transform 0.5s ease;
 }
 
 .threecards:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* text under each image */
 .dealtext-below {
-  margin-top: 20px;
-  color: black;
-  text-align: left;
-  padding-left: 20px;
-  padding-bottom: 15px;
+  padding: 25px;
+  background: var(--brand-white);
 }
 
 .dealtext-below h4 {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: black;
-  margin-bottom: 5px;
-}
-.fa-arrow-right {
-  color: #000;
+  font-family: "Inter", sans-serif;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .dealtext-below h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
   margin: 0;
+  color: var(--brand-black);
 }
 
-/* PRODUCT SLIDER */
-
-.product {
-  flex: 0 0 250px;
-  border-radius: 30px;
-  margin: 12px;
-  transition: transform 0.3s ease;
-  object-fit: contain;
-}
-.product:hover {
-  transform: translateY(-5px);
-}
-.product img {
-  width: 100%;
-  height: 250px;
-  margin-top: 50px;
-  border-radius: 30px;
-  background-color: white;
-}
-
-/* MIDSEC */
-
-.midsec {
-  margin-top: 20px;
-  width: 100%;
-  text-align: center;
-}
-.imgmidsec {
-  width: 83vw;
-  height: 80vh;
-  margin-top: 90px;
-  border-radius: 30px;
-}
-
-/* BUYING GUIDE */
-
-.buyingguide {
-  height: 70vh;
-  width: 100%;
-  background-color: #0a0e17;
-  margin-top: 70px;
+.arrow-circle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--brand-black);
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  background-color: transparent;
+  transition: all 0.3s;
 }
 
-.buyingguide-boxes {
-  display: flex;
-  justify-content: center;
-  padding-top: 90px;
+.arrow-circle i {
+  color: #000000; /* Arrow starts black */
+  transition: all 0.3s ease;
 }
-.bgimg-holder {
-  height: 10vh;
-  width: auto;
-  display: flex;
-  margin-left: 15px;
-  border-radius: 10px;
-  margin-top: 25px;
-  overflow: hidden;
-}
-.bgtext {
-  margin-top: 20px;
-  margin-left: 20px;
-  color: #282830;
-}
-.bgtext p {
-  margin: 0;
-  margin-top: 10px;
-}
-.bg-box {
-  height: 17vh;
-  width: 27vw;
-  display: flex;
-  background-color: #2c302f;
-  margin-left: 15px;
-  border-radius: 15px;
-  overflow: hidden;
+.threecards:hover .arrow-circle {
+  background-color: #000000; /* Circle goes black */
+  border-color: #000000;
 }
 
-.btnguide {
-  margin-top: 10vh;
-  transition: width 1s ease;
-  width: 15vw;
-  height: 50px;
-  border-radius: 10px;
-  background-color: #0d6efd;
-  border: #000;
+.threecards:hover .arrow-circle i {
+  color: #ffffff;
 }
-.btnguide:hover {
-  width: 26vw;
-}
-.imgbg {
-  border: 120px;
+.badge {
+  background-color: var(--brand-black) !important;
+  color: var(--brand-white) !important;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 5;
 }
 
-/* TECH DIVS */
+/* <-- ================= OFFERS ================= --> */
 
-.main1 {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 80px;
-}
-.submain1 {
-  display: flex;
-  justify-content: center;
-}
-.imgsubmain1 {
-  width: 41vw;
-  /* height: 70vh; */
-  border-radius: 20px;
-  object-fit: cover;
-  /* padding: 20px; */
-}
-.main2 {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-}
-.submain2 {
-  display: flex;
-  justify-content: center;
-}
-.imgsubmain2 {
-  height: 55vh;
-  width: 27vw;
-  border-radius: 30px;
-  object-fit: cover;
-  /* padding: 50px; */
-  overflow: hidden;
-}
-
-/* footer */
-
-.footermain {
-  display: flex;
-  margin-left: 140px;
-}
-.footersubmain2 {
-  margin-left: 100px;
-}
-.footersubmain3 {
-  margin-left: 100px;
-}
-
-/* ===== PRODUCTS PAGE ===== */
-
-.intro-text {
-  text-align: center;
-  padding: 50px 20px 30px;
-  background-color: #181818; /* matches your products section */
-  color: #f1f1f1;
-}
-
-.intro-text h1 {
-  font-family: "Rakkas", cursive;
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #0d6efd; /* accent color to highlight */
-}
-
-.intro-text p {
-  font-family: "Lora", serif;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: #ccc;
-}
-/* ===== GENERAL STYLES ===== */
-body {
-  font-family: "Lora", serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-}
-
-/* ===== NAVBAR ===== */
-.navbar {
-  background-color: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navtext p {
-  display: inline-block;
-  margin: 0 15px;
-  cursor: pointer;
-}
-
-.navtext p:hover {
-  color: #0d6efd;
-}
-
-/* ===== PRODUCTS SECTION ===== */
-
-/* NAVBAR */
-.navbar {
-  background-color: #1f1f1f;
-  padding: 15px 30px;
-}
-
-.navtext p {
-  display: inline-block;
-  margin: 0 15px;
-  color: #f1f1f1;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.navtext p:hover {
-  color: #0d6efd;
-}
-
-.navbar-brand .logo-circle {
-  background-color: #0d6efd;
-  color: #fff;
-  border-radius: 50%;
-  padding: 10px 15px;
-  font-weight: bold;
-}
-
-/* PRODUCTS SECTION */
-
-.products {
-  margin-top: 0px;
-  background-color: #121212; /* dark page background */
-  padding: 50px 0;
-}
-
-.productsrows {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.productimgs {
-  width: 15vw;
-  min-width: 200px;
-  height: 50vh;
-  padding: 30px;
-  background-color: #1f1f1f; /* dark card */
-  margin: 15px;
-  border-radius: 30px;
-  overflow: hidden;
+.deal-banner {
   position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--brand-black);
+  cursor: pointer;
+  background-color: var(--brand-black);
+  height: 350px;
+}
+
+.deal-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease;
+  opacity: 0.9;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.banner-overlay span {
+  color: var(--brand-white);
+  border: 2px solid var(--brand-white);
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.deal-banner:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.deal-banner:hover .banner-overlay {
+  opacity: 1;
+}
+
+.row.mt-1 .deal-banner {
+  height: 290px;
+}
+
+/* <-- ================= BANNER STYLING ================= --> */
+
+.custom-wide-container {
+  max-width: 1300px;
+}
+
+.banner-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  border: 1px solid var(--brand-black);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.banner-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.banner-caption {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-weight: 900;
+  font-size: 6rem !important;
+  color: var(--brand-white) !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.banner-frame:hover .banner-img {
+  transform: scale(1.02);
+}
+
+/* <-- ================= BUYING GUIDES ================= --> */
+
+.guide-item {
+  background-color: var(--brand-white);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.img-frame {
+  height: 60px;
+  width: 100%;
+  background-color: var(--brand-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.btn-solid-tech {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: var(--brand-black);
+  color: var(--brand-white) !important;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  border: 2px solid var(--brand-black);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-solid-tech:hover {
+  background-color: transparent;
+  color: var(--brand-black) !important;
+}
+
+.guide-item:hover {
+  background-color: var(--brand-black);
+}
+
+.guide-item:hover .guide-img {
+  transform: scale(1.2);
+}
+
+.guide-item:hover .guide-title {
+  color: var(--brand-white) !important;
+}
+
+.guide-item:hover .guide-label {
+  color: #aaaaaa !important; /* Kept your specific hex here */
+}
+
+.guide-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.guide-title {
+  color: var(--brand-black);
+  transition: color 0.3s ease;
+}
+
+/* ==========================================================================
+                                     PRODUCTS PAGE
+   ========================================================================== */
+/* ===== intro section ===== */
+
+.intro-section {
+  padding: 120px 0 80px;
+  background-color: #ffffff;
+}
+
+.intro-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Left Side: Bold Headline */
+.intro-header {
+  flex: 1.2;
+}
+
+.intro-header span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.intro-header h1 {
+  font-size: 4.5rem; /* Large and impactful */
+  font-weight: 900;
+  line-height: 1;
+  color: #000;
+  margin: 0;
+  letter-spacing: -3px;
+}
+
+/* Right Side: Clean Description */
+.intro-content {
+  flex: 1;
+  padding-top: 25px; /* Aligns with the first line of the H1 */
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin: 0;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Vertical accent line */
+.intro-content p::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  bottom: 5px;
+  width: 1px;
+  background-color: #ddd;
+}
+
+/* ==========================================================================
+   4. PRODUCT GRID & CARDS (Wide & Pop-out)
+   ========================================================================== */
+/* We create a wider container to give the 5-column grid more room to breathe */
+.wide-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 25px; /* Increased padding makes the card feel wider */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between; /* keeps image at top, text/button at bottom */
-  transition: transform 0.4s ease;
+  height: 100%;
+  transition: all 0.4s ease; /* Smooth transition for the pop effect */
+  overflow: hidden;
+  position: relative;
 }
 
-.productimgs:hover {
-  transform: scale(1.05);
-  /* transform: translateY(-8px); */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+/* THE POP OUT EFFECT: Lifts card up without shifting neighbors */
+.product-card:hover {
+  transform: translateY(-15px);
+  border-color: #000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  z-index: 10;
 }
 
-.productimgs img {
+.product-img-frame {
   width: 100%;
-  height: auto;
-  border-radius: 15px;
-  transition: transform 0.4s ease;
+  height: 200px; /* Taller frame to match the wider card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-.productimgs:hover img {
-  transform: scale(1.05);
+.product-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
 }
 
-/* Product text placement */
+/* Slight internal zoom during the card pop */
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
 .productname {
-  font-family: "Lora", serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: center;
-  margin-top: 15px;
-  color: #f1f1f1; /* always visible */
+  font-size: 1.05rem; /* Larger font for wider cards */
+  font-weight: 700;
+  height: 2.8rem;
+  overflow: hidden;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
-/* 
-.productprice,
-.productimgs button {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-} */
-
-/* .productimgs:hover .productprice,
-.productimgs:hover button {
-  opacity: 1;
-  transform: translateY(0);
-} */
 
 .productprice {
-  font-family: "Lora", serif;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 5px;
-  color: #0d6efd;
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+.btn-buy {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-top: auto;
+  transition: 0.3s;
 }
 
-.productimgs button {
-  background-color: transparent;
-  border: 1px solid #0d6efd;
-  color: #0d6efd;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
+.btn-buy:hover {
+  background-color: #333;
+}
+/* ==========================================================================
+   ABOUT PAGE - ENHANCED EDITORIAL STYLE
+   ========================================================================== */
+.rounded-tech {
+  border-radius: 2rem !important; /* Large, modern roundness */
+  overflow: hidden; /* Essential for the image to respect the radius */
+}
+
+.img-fit-rounded {
+  border-radius: 2rem !important;
+  object-fit: cover;
+  min-height: 450px; /* Ensures vertical symmetry on larger screens */
+}
+
+.quality-box {
+  border: 1px solid var(--border-light);
+  background-color: #f8f9fa; /* Matches your bg-light */
+}
+.custom-wide-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.tracking-widest {
+  letter-spacing: 0.25em;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+}
+
+.blueprint-step {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.blueprint-step:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.blueprint-step:hover .text-muted {
+  color: #888 !important;
+}
+
+/* --- TEAM SECTION --- */
+.team-img-placeholder {
+  background-color: #1a1a1a;
+  filter: grayscale(100%);
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease;
+}
+
+.team-card:hover .team-img-placeholder {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+.team-card {
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.display-2,
+.display-5,
+.display-6 {
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Professional Scrollbar for the long page */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border: 2px solid #fff;
+}
+/* CONTACT US */
+
+/* 1. Vertical Centering logic for the Left Side */
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* This ensures the text is dead-center vertically */
+  min-height: 100%;
+}
+
+/* 2. Headline Styling: Matching your Arial Black Brand */
+.contact-hero h1 {
+  font-family: "Arial Black", sans-serif !important;
+  font-size: 5rem !important; /* Massive scale for high-end look */
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -4px;
+  color: var(--brand-black);
   margin-bottom: 25px;
 }
 
-.productimgs button:hover {
-  background-color: #0d6efd;
-  color: #fff;
-}
-/* FOOTER */
-/* FOOTER - DARK THEME WITH BETTER TEXT PLACEMENT */
-
-.footer {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
-  padding: 50px 0 20px 0;
+.contact-hero p {
   font-family: "Lora", serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 420px;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  gap: 30px;
+/* 3. The Form Card: Matching your .banner-frame softness */
+.form-box {
+  padding: 60px;
+  background-color: var(--brand-white);
+  border: 1px solid var(--border-light);
+  border-radius: 40px !important; /* Perfect match to your home page curves */
+  /* Deeper, softer shadow to create "attractive" depth */
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.footer-section {
-  flex: 1 1 220px;
+.form-box:hover {
+  transform: translateY(-10px);
+  border-color: var(--brand-black);
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.1) !important;
 }
 
-.footer-section h2.footer-title {
-  font-family: "Rakkas", cursive;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #0d6efd;
+/* 4. Soft Grey Inputs: Matching the "Premium Tech" look */
+.form-box label {
+  font-family: "Arial Black", sans-serif !important;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  display: block;
+  color: var(--brand-black);
 }
 
-.footer-section p,
-.footer-section li {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #ccc;
+.form-control {
+  border: none !important;
+  background-color: #f4f4f4 !important; /* Matches the clean grey in your images */
+  border-radius: 12px !important;
+  padding: 18px 22px !important;
+  font-family: "Lora", serif;
+  font-style: italic; /* Matches your slider style */
+  /* transition: all 0.3s ease !important; */
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
+.form-control:focus {
+  background-color: #ededed !important;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03) !important;
 }
 
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  text-decoration: none;
-  color: #ccc;
-  transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: #0d6efd;
-}
-
-.footer-section .social-links {
-  display: flex;
-  gap: 15px;
+/* 5. The Pill Button: Your core brand element */
+.btn-dark {
+  background-color: var(--brand-black) !important;
+  color: var(--brand-white) !important;
+  border-radius: 100px !important; /* Full pill shape */
+  padding: 20px !important;
+  font-family: "Arial Black", sans-serif !important;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease !important;
+  border: none !important;
   margin-top: 10px;
 }
 
-.footer-section .social-links a {
-  color: #ccc;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
+.btn-dark:hover {
+  background-color: #222 !important;
+  transform: scale(1.02);
+}
+/* --- GLOBAL HEADINGS --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial Black", sans-serif !important;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--brand-black);
 }
 
-.footer-section .social-links a:hover {
-  color: #0d6efd;
+/* --- CONTACT SECTION SPACING --- */
+
+/* Parent Container breathing room */
+.contact-section-wrapper {
+  padding: 100px 0; /* Huge vertical margins to make it feel premium */
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #333;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* Adjust spacing inside each section */
-.footer-section.about p {
-  margin-bottom: 20px;
-}
-
-.footer-section.contact p {
-  margin-bottom: 8px;
-}
-
-/* Optional: icons spacing */
-.footer-section.contact i {
-  margin-right: 8px;
-  color: #0d6efd;
-}
-
-/* ABOUT US */
-body {
-  background-color: #121212;
-  color: #f1f1f1;
-  font-family: "Lora", serif;
-  margin: 0;
-  padding: 0;
-}
-
-.about-hero {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #1a1a1a;
-}
-
-.about-hero h1 {
-  font-family: "Rakkas", cursive;
-  font-size: 2.5rem;
-  color: #0d6efd;
-  margin-bottom: 15px;
-}
-
-.about-hero p {
-  font-size: 1.1rem;
-  color: #ccc;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.mission-vision {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 20px;
-}
-
-.mission,
-.vision {
-  max-width: 400px;
-}
-
-.mission h2,
-.vision h2 {
-  color: #0d6efd;
-  font-family: "Rakkas", cursive;
-  margin-bottom: 10px;
-}
-
-.mission p,
-.vision p {
-  color: #ccc;
-  line-height: 1.6;
-}
-
-/* TEAM */
-.team {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.team h2 {
-  font-family: "Rakkas", cursive;
-  color: #0d6efd;
-  margin-bottom: 40px;
-}
-
-.team-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.team-member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #0d6efd;
-  margin-bottom: 15px;
-}
-
-.team-member h4 {
-  margin: 5px 0;
-}
-
-.team-member p {
-  margin: 0;
-  color: #ccc;
-}
-
-/* FOOTER */
-.footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  padding: 40px 20px;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-section {
-  max-width: 300px;
-  margin-bottom: 20px;
-}
-
-.footer-section h2 {
-  color: #0d6efd;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 8px 0;
-}
-
-.footer-section ul li a {
-  text-decoration: none;
-  color: #ccc;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #333;
-  margin-top: 20px;
-}
-
-/* CONTACT US */
-
-body {
-  background-color: #121212;
-  color: #f1f1f1;
-  font-family: "Lora", serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* HERO SECTION */
+/* 1. Left Side: Centered Typography */
 .contact-hero {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #1a1a1a;
+  /* No top padding so row alignment works perfectly */
+  padding: 0;
 }
 
 .contact-hero h1 {
-  font-family: "Rakkas", cursive;
-  font-size: 2.5rem;
-  color: #0d6efd;
-  margin-bottom: 15px;
+  font-size: 4.7rem !important;
+  line-height: 0.85;
+  letter-spacing: -4px;
+  margin-bottom: 35px; /* Added breathing room below heading */
 }
 
 .contact-hero p {
-  font-size: 1.1rem;
-  color: #ccc;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  font-family: "Lora", serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 440px;
+  margin: 0;
 }
 
-/* CONTACT FORM AND INFO */
-.contact-container {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 20px;
-  flex-wrap: wrap;
+/* 2. The Form Box: Spacing & Softness */
+.form-box {
+  background-color: var(--brand-white);
+  padding: 30px 50px !important;
+  border: 1px solid var(--border-light);
+  border-radius: 40px !important;
+  box-shadow: 0 45px 110px rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.form-box:hover {
+  border-color: var(--brand-black);
+  box-shadow: 0 60px 130px rgba(0, 0, 0, 0.1) !important;
 }
 
-.contact-info,
-.contact-form {
-  max-width: 400px;
-  margin-bottom: 30px;
+.form-box .mb-4 {
+  margin-bottom: 30px !important;
 }
 
-.contact-info h2,
-.contact-form h2 {
-  color: #0d6efd;
-  margin-bottom: 15px;
-  font-family: "Rakkas", cursive;
+.form-box label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  display: block;
 }
 
-.contact-info p {
-  color: #ccc;
-  line-height: 1.6;
-  margin: 8px 0;
+/* Soft Grey Inputs */
+.form-control {
+  border: none !important;
+  background-color: #f6f6f6 !important; /* Soft tech grey */
+  border-radius: 15px !important;
+  padding: 20px 25px !important; /* Spacing inside inputs */
+  font-family: "Lora", serif;
 }
 
-/* FORM STYLING */
-.contact-form form {
-  display: flex;
-  flex-direction: column;
+/* Premium Pill Button */
+.btn-dark {
+  margin-top: 20px;
+  padding: 22px !important;
+  border-radius: 100px !important;
+  letter-spacing: 3px;
+  width: 100%;
+  border: none !important;
+  transition: all 0.3s ease !important;
 }
 
-.contact-form label {
-  margin-bottom: 5px;
-  margin-top: 15px;
+.btn-dark:hover {
+  background-color: #222 !important;
+  transform: scale(1.015);
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 10px;
-  background-color: #1a1a1a;
-  color: #f1f1f1;
+/* 3. Contact Details / Footer Spacing */
+.contact-details {
+  margin-top: 80px;
+  padding: 50px;
+  border-radius: 30px;
+  background-color: #f9f9f9;
 }
 
-.contact-form textarea {
-  resize: none;
-  height: 120px;
+.contact-details h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
 }
 
-.contact-form button {
-  margin-top: 15px;
-  width: 150px;
-  align-self: flex-start;
+/* FAQ Box */
+.faq-box {
+  background-color: #f5f5f5;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  border-left: 6px solid var(--brand-black);
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: auto;
+  margin: 70px 40px 70px 50px;
 }
 
-/* FOOTER */
-.footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  padding: 40px 20px;
+.faq-box:hover {
+  transform: translateY(-4px);
+  background-color: var(--brand-white);
+  border-color: var(--brand-black); /* Ensures the border-left pops */
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.faq-box h2 {
+  font-family: "Arial Black", sans-serif; /* Matching your tech brand */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 900;
+  color: #333;
+  text-transform: uppercase;
 }
 
-.footer-section {
-  max-width: 300px;
+.faq-box p {
+  font-family: "Lora", serif; /* Consistent with your slider/product style */
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #555;
+  margin-bottom: 0; /* Removes extra bottom space inside the box */
+}
+footer {
+  background-color: var(--footer-dark);
+  color: var(--footer-text);
+  padding: 60px 0 20px 0;
+  width: 100%;
+}
+
+footer h6 {
+  color: var(--brand-white);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 20px;
 }
 
-.footer-section h2 {
-  color: #0d6efd;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin: 8px 0;
-}
-
-.footer-section ul li a {
+.footer-link {
   text-decoration: none;
-  color: #ccc;
+  color: var(--footer-text);
+  transition: color 0.2s ease;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 20px;
+.footer-link:hover {
+  color: var(--brand-white) !important;
+}
+
+/* Fixed Social Icons */
+.social-icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--social-bg);
+  color: var(--brand-white);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-icon-box:hover {
+  transform: translateY(-3px);
+  background-color: #3d4249;
+}
+
+footer hr {
   border-top: 1px solid #333;
-  margin-top: 20px;
+  opacity: 0.5;
+  margin: 40px 0 20px 0;
 }

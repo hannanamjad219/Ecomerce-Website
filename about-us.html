@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -45,121 +45,289 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-secondary">
-        <div class="container-fluid">
-          <!-- Logo on extreme left -->
+      <!-- ================= NAVBAR ================= -->
 
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <div class="logo">
-              <span class="logo-circle">AH</span>
-            </div>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-dark py-3"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand fw-black fs-3"
+            href="index.html"
+            style="font-family: &quot;Arial Black&quot;, sans-serif"
+          >
+            TECHVERSE
           </a>
-          <div class="navtext">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="about-us.html">About Us</a>
-            <a href="contact-us.html">Contact Us</a>
-          </div>
 
-          <!-- Dropdown menu on extreme right -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#studioNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary border-0"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <li><a class="dropdown-item" href="#">Manage</a></li>
-              <li><a class="dropdown-item" href="#">Reward</a></li>
-              <li><a class="dropdown-item" href="#">Help</a></li>
-              <li><a class="dropdown-item" href="#">Log in</a></li>
+          <div class="collapse navbar-collapse" id="studioNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" href="about-us.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="contact-us.html">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-
-      <!-- Slider -->
-      <!-- <hr /> -->
     </header>
 
-    <!-- HERO SECTION -->
-    <div class="about-hero">
-      <h1>About TechVerse</h1>
-      <p>
-        TechVerse brings you the latest gadgets, gaming gear, and electronics.
-        Our goal is to make technology simple, fun, and accessible for everyone.
-      </p>
-    </div>
-
-    <!-- MISSION AND VISION -->
-    <div class="mission-vision container">
-      <div class="mission">
-        <h2>Our Mission</h2>
-        <p>
-          To provide the best tech products with fast delivery and excellent
-          service.
+    <section class="hero-section">
+      <div class="container text-center mb-5 mt-5">
+        <h1 class="display-4 fw-bold">
+          We're defining the future of tech retail.
+        </h1>
+        <p class="lead mx-auto text-muted-custom" style="max-width: 700px">
+          Founded in 2024, TechVerse was born out of a simple frustration:
+          high-end technology shouldn't be a headache to buy. We curate the best
+          tools for creators, developers, and dreamers.
         </p>
       </div>
-      <div class="vision">
-        <h2>Our Vision</h2>
-        <p>
-          To be the most trusted online tech store and a favorite of tech lovers
-          everywhere.
-        </p>
-      </div>
-    </div>
+    </section>
 
-    <!-- TEAM -->
-    <div class="team container">
-      <h2>Meet Our Team</h2>
-      <div class="team-row">
-        <div class="team-member">
-          <img src="./images/team1.jpg" alt="John Doe" />
-          <h4>John Doe</h4>
-          <p>Founder & CEO</p>
+    <section class="custom-wide-container py-5">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-lg-6">
+          <div
+            class="quality-box rounded-tech p-5 h-100 d-flex flex-column justify-content-center"
+          >
+            <h1 class="fw-black text-uppercase display-5 mb-4">
+              Quality isn't optional.
+            </h1>
+            <p class="text-muted mb-4 lead">
+              Every product in our inventory undergoes a rigorous 20-point
+              inspection. If it's not good enough for our desks, it's not good
+              enough for yours.
+            </p>
+            <hr class="mb-4" />
+            <div class="row">
+              <div class="col-6">
+                <h2 class="fw-black mb-0">10K+</h2>
+                <span class="small text-uppercase tracking-widest text-muted"
+                  >Orders Shipped</span
+                >
+              </div>
+              <div class="col-6">
+                <h2 class="fw-black mb-0">99%</h2>
+                <span class="small text-uppercase tracking-widest text-muted"
+                  >Satisfaction</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="team-member">
-          <img src="./images/team2.jpg" alt="Jane Smith" />
-          <h4>Jane Smith</h4>
-          <p>Marketing Head</p>
-        </div>
-        <div class="team-member">
-          <img src="./images/team3.jpg" alt="Mike Johnson" />
-          <h4>Mike Johnson</h4>
-          <p>Lead Developer</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section about">
-          <h2 class="footer-title">About TechVerse</h2>
-          <p>
-            TechVerse brings you the latest gadgets, gaming gear, and
-            electronics at unbeatable prices.
-          </p>
-        </div>
-        <div class="footer-section links">
-          <h2 class="footer-title">Quick Links</h2>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Shop</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <div class="col-12 col-lg-6">
+          <img
+            src="Images/imgforweb.jpg"
+            class="img-fluid h-100 w-100 img-fit-rounded"
+            alt="Tech setup"
+          />
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 TechVerse. All Rights Reserved.</p>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Our Core Principles</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div
+              class="p-4 bg-white border-custom feature-card"
+              style="border-radius: 20px"
+            >
+              <h5 class="fw-bold">Innovation First</h5>
+              <p class="text-muted-custom mb-0">
+                We don't just follow trends;we look for products that move the
+                needle in daily productivity and modern design.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div
+              class="p-4 bg-white border-custom feature-card"
+              style="border-radius: 20px"
+            >
+              <h5 class="fw-bold">Global Support</h5>
+              <p class="text-muted-custom mb-0">
+                Tech issues don't follow a 9-to-5. Our team is available across
+                time zones to keep you powered up.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div
+              class="p-4 bg-white border-custom feature-card"
+              style="border-radius: 20px"
+            >
+              <h5 class="fw-bold">Sustainability</h5>
+              <p class="text-muted-custom mb-0">
+                From carbon-neutral shipping to recyclable packaging, we care
+                about the planet as much as the chips.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer
+      class="py-5 w-100"
+      style="background-color: #1a1c20; color: #adb5bd"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4
+              class="fw-bold text-white mb-3"
+              style="font-family: &quot;Arial Black&quot;, sans-serif"
+            >
+              TECHVERSE
+            </h4>
+            <p
+              class="text-white-50"
+              style="font-size: 0.95rem; line-height: 1.6"
+            >
+              TechVerse brings you the latest gadgets, gaming gear, and
+              electronics at unbeatable prices.
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="index.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="products.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Shop</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="about-us.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >About</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="faqs.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >FAQs</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="privacypolicy.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Privacy policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Contact</h6>
+            <p class="text-white-50 mb-2 small">
+              <i class="fa-solid fa-location-dot me-2 text-white"></i> Pakistan
+            </p>
+            <p class="text-white-50 mb-2 small">
+              <i class="fa-solid fa-envelope me-2 text-white"></i>
+              support@techverse.com
+            </p>
+            <p class="text-white-50 small">
+              <i class="fa-solid fa-phone me-2 text-white"></i> +92 309 7724475
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4 text-md-end">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Follow Us</h6>
+            <div
+              class="d-flex justify-content-center justify-content-md-end gap-2"
+            >
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-facebook-f text-white"></i>
+              </a>
+
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-instagram text-white"></i>
+              </a>
+
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-youtube text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+          class="my-4"
+        />
+
+        <div class="text-center small text-white-50">
+          &copy; 2025 TechVerse. All Rights Reserved.
+        </div>
       </div>
     </footer>
   </body>

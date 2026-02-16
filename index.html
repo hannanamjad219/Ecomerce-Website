@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
       rel="stylesheet"
@@ -44,401 +45,526 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-secondary">
-        <div class="container-fluid">
-          <!-- Logo on extreme left -->
+    <!-- ================= NAVBAR ================= -->
 
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <div class="logo">
-              <span class="logo-circle">AH</span>
-            </div>
-          </a>
-          <div class="navtext">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="about-us.html">About Us</a>
-            <a href="contact-us.html">Contact Us</a>
-          </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-dark py-3"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-black fs-3"
+          href="#"
+          style="font-family: &quot;Arial Black&quot;, sans-serif"
+        >
+          TECHVERSE
+        </a>
 
-          <!-- Dropdown menu on extreme right -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#studioNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary border-0"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <li><a class="dropdown-item" href="#">Manage</a></li>
-              <li><a class="dropdown-item" href="#">Reward</a></li>
-              <li><a class="dropdown-item" href="#">Help</a></li>
-              <li><a class="dropdown-item" href="#">Log in</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Slider -->
-
-      <div
-        id="carouselExampleAutoplaying"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="3000"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="imgslider"
-              src="Images/productslider3.avif"
-              class="d-block w-100"
-              alt="Product 1"
-            />
-          </div>
-          <div class="carousel-item slider">
-            <img
-              class="imgslider"
-              src="Images/productslider4.avif"
-              class="d-block w-100"
-              alt="Product 2"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              class="imgslider"
-              src="Images/productslider7.avif"
-              class="d-block w-100"
-              alt="Product 3"
-            />
-          </div>
-        </div>
-
-        <!-- Navigation buttons below slider -->
-
-        <div class="text-center mt-3">
-          <button
-            class="btn btn-dark me-2"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <i class="fa-solid fa-angle-left"></i>
-          </button>
-          <button
-            class="btn btn-dark"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
+        <div class="collapse navbar-collapse" id="studioNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="about-us.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="contact-us.html">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </nav>
+    <!-- ================= HERO SLIDER ================= -->
+    <div class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-5 mb-md-0">
+          <div class="slider-text-content text-center px-lg-4">
+            <h1
+              class="display-6 fw-bold mb-3"
+              style="font-family: &quot;Arial Black&quot;, sans-serif"
+            >
+              Upgrade Your Universe
+            </h1>
 
-    <!--Categories boxes-->
+            <p class="para-slider">
+              TechVerse is your destination for premium technology built for
+              modern life. From high-performance laptops and smart devices to
+              gaming gear and everyday electronics, we bring together products
+              that balance innovation, reliability, and value.
+            </p>
 
-    <div class="mainhead">
-      <div class="cateboxes">
-        <div class="catetextholder">
-          <div class="catecards">
-            <img
-              class="imgcateboxes"
-              src="./Images/laptop.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <div class="mt-4">
+              <a
+                href="products.html"
+                class="btn btn-dark btn-tech-sm fw-bold text-uppercase"
+                style="border-radius: 18px !important"
+              >
+                Explore Products
+              </a>
+            </div>
           </div>
-          <p class="catecardstext">Laptops <br />& Tablets</p>
         </div>
-        <div class="catetextholder">
+        <div class="col-md-6">
+          <div
+            id="techVerseCarousel"
+            class="carousel slide shadow-lg"
+            data-bs-ride="carousel"
+            data-bs-interval="3000"
+          >
+            <div class="carousel-inner custom-slider-edges">
+              <div class="carousel-item active">
+                <img
+                  src="Images/Sliderimg2.jpeg"
+                  class="d-block w-100 imgslide"
+                  style="height: 500px; object-fit: cover"
+                  alt="Sale 1"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="Images/Sliderimg1.jpeg"
+                  class="d-block w-100 imgslide"
+                  style="height: 500px; object-fit: cover"
+                  alt="Sale 2"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="Images/Sliderimg3.jpeg"
+                  class="d-block w-100 imgslide"
+                  style="height: 500px; object-fit: cover"
+                  alt="Sale 3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <button
+              class="btn btn-light slider-btn"
+              data-bs-target="#techVerseCarousel"
+              data-bs-slide="prev"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button
+              class="btn btn-light slider-btn"
+              data-bs-target="#techVerseCarousel"
+              data-bs-slide="next"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ================= CATEGORIES ================= -->
+
+    <div class="container mt-5 py-4">
+      <h3
+        class="text-center fw-bold mb-5"
+        style="font-family: &quot;Arial Black&quot;, sans-serif"
+      >
+        Shop Our Top Categories
+      </h3>
+
+      <div class="row justify-content-center g-4 text-center">
+        <div class="col-6 col-md-4 col-lg-2">
           <div class="catecards">
-            <img
-              class="imgcateboxes"
-              src="./Images/phone.avif"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="Images/laptop.png" class="imgcateboxes" />
+          </div>
+          <p class="catecardstext">Laptops & Tablets</p>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="catecards">
+            <img src="Images/phone.avif" class="imgcateboxes" />
           </div>
           <p class="catecardstext">Mobiles</p>
         </div>
-        <div class="catetextholder">
+
+        <div class="col-6 col-md-4 col-lg-2">
           <div class="catecards">
-            <img
-              class="imgcateboxes"
-              src="./Images/productslider4.avif"
-              class="card-img-top"
-              alt="..."
-            />
-          </div>
-          <p class="catecardstext">Audio</p>
-        </div>
-        <div class="catetextholder">
-          <div class="catecards">
-            <img
-              class="imgcateboxes"
-              src="./Images/camera.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="Images/camera.png" class="imgcateboxes" />
           </div>
           <p class="catecardstext">Camera</p>
         </div>
-        <div class="catetextholder">
+
+        <div class="col-6 col-md-4 col-lg-2">
           <div class="catecards">
-            <img
-              class="imgcateboxes"
-              src="./Images/tv.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="Images/tv.png" class="imgcateboxes" />
           </div>
           <p class="catecardstext">TV</p>
         </div>
-        <div class="catetextholder">
+
+        <div class="col-6 col-md-4 col-lg-2">
           <div class="catecards">
-            <img
-              class="imgcateboxes"
-              src="./Images/gaming.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="Images/gaming.png" class="imgcateboxes" />
           </div>
           <p class="catecardstext">Gaming</p>
         </div>
-      </div>
-    </div>
-    <div class="mainhead">
-      <div class="boxes3">
-        <div class="threecards">
-          <img src="./images/deal2.avif" class="deals" alt="Laptop" />
-          <div class="dealtext-below">
-            <h4>Iphone 17 Pro Max</h4>
-            <h2>$1199 <i class="fa-solid fa-arrow-right"></i></h2>
-          </div>
-        </div>
 
-        <div class="threecards">
-          <img
-            src="./images/deal3.avif"
-            class="card-img-top"
-            alt="Smartwatch"
-          />
-          <div class="dealtext-below">
-            <h4>Playstation 5</h4>
-            <h2>$499 <i class="fa-solid fa-arrow-right"></i></h2>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="catecards">
+            <img src="Images/audio.png" class="imgcateboxes" />
           </div>
-        </div>
-        <div class="threecards">
-          <img
-            src="./images/deal1.avif"
-            class="card-img-top"
-            alt="Television"
-          />
-          <div class="dealtext-below">
-            <h4>Samsung QLED</h4>
-            <h2>$2499 <i class="fa-solid fa-arrow-right"></i></h2>
-          </div>
+          <p class="catecardstext">Audio & Music</p>
         </div>
       </div>
     </div>
 
-    <!-- Products -->
+    <!-- ================= TOP DEALS ================= -->
 
-    <div
-      id="productCarousel2"
-      class="carousel slide"
-      data-bs-ride="false"
-      data-bs-wrap="false"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="d-flex justify-content-center flex-wrap">
-            <div class="product text-center">
-              <img src="./images/productslider1.avif" alt="..." />
-            </div>
-            <div class="product text-center">
-              <img src="./images/productslider3.avif" alt="..." />
-            </div>
-            <div class="product text-center">
-              <img src="./images/productslider5.avif" alt="..." />
-            </div>
-            <div class="product text-center">
-              <img src="./images/productslider7.avif" alt="..." />
+    <div class="container my-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="threecards position-relative">
+            <span
+              class="badge bg-dark position-absolute m-3 px-3 py-2 rounded-pill"
+              >Top Seller</span
+            >
+            <img src="images/deal2.avif" alt="Iphone" />
+            <div class="dealtext-below">
+              <h4>iPhone 17 Pro Max</h4>
+              <div
+                class="d-flex justify-content-between align-items-center pe-4"
+              >
+                <h2>$1199</h2>
+                <div class="arrow-circle">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="d-flex justify-content-center flex-wrap">
-            <div class="product text-center">
-              <img src="./images/productslider2.avif" alt="..." />
+
+        <div class="col-md-4">
+          <div class="threecards position-relative">
+            <span
+              class="badge bg-danger position-absolute m-3 px-3 py-2 rounded-pill"
+              >Save $100</span
+            >
+            <img src="images/deal3.avif" alt="PS5" />
+            <div class="dealtext-below">
+              <h4>Playstation 5</h4>
+              <div
+                class="d-flex justify-content-between align-items-center pe-4"
+              >
+                <h2>$499</h2>
+                <div class="arrow-circle">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+              </div>
             </div>
-            <div class="product text-center">
-              <img src="./images/productslider4.avif" alt="..." />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="threecards position-relative">
+            <span
+              class="badge bg-dark position-absolute m-3 px-3 py-2 rounded-pill"
+              >New Arrival</span
+            >
+            <img src="images/deal1.avif" alt="TV" />
+            <div class="dealtext-below">
+              <h4>Samsung QLED</h4>
+              <div
+                class="d-flex justify-content-between align-items-center pe-4"
+              >
+                <h2>$2499</h2>
+                <div class="arrow-circle">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+              </div>
             </div>
-            <div class="product text-center">
-              <img src="./images/productslider6.avif" alt="..." />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= TOP DEALS ================= -->
+    <div class="container mt-5">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="deal-banner">
+            <img src="Images/img5.jpg" class="img-fluid" alt="Promo 1" />
+            <div class="banner-overlay"><span>View Deal</span></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="deal-banner">
+            <img src="Images/img6.jpg" class="img-fluid" alt="Promo 2" />
+            <div class="banner-overlay"><span>View Deal</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-md-4">
+          <div class="deal-banner">
+            <img src="Images/img7.jpg" class="img-fluid" alt="Promo 3" />
+            <div class="banner-overlay"><span>Shop Now</span></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="deal-banner">
+            <img src="Images/img3.jpg" class="img-fluid" alt="Promo 4" />
+            <div class="banner-overlay"><span>Shop Now</span></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="deal-banner">
+            <img src="Images/img4.jpg" class="img-fluid" alt="Promo 5" />
+            <div class="banner-overlay"><span>Shop Now</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MID SECTION ================= -->
+
+    <div class="container custom-wide-container my-5">
+      <div class="banner-frame">
+        <img
+          src="Images/Sliderimg1.avif.jpeg"
+          class="img-fluid banner-img"
+          alt="Featured Collection"
+        />
+        <div class="banner-caption">
+          <h2 class="fw-bold" style="color: aliceblue">The Future of Tech</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= BUYING GUIDE ================= -->
+
+    <section class="container my-5 text-center py-4">
+      <h3 class="fw-bold mb-1">BUYING GUIDES</h3>
+      <p class="text-muted mb-5">
+        Make informed purchasing decisions with confidence.
+      </p>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <div class="guide-item border border-dark rounded-4 p-2">
+            <div class="row g-0 align-items-center">
+              <div class="col-3 p-1">
+                <div class="img-frame rounded-3 overflow-hidden">
+                  <img src="Images/cam3.jpg" class="guide-img" alt="Laptops" />
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="card-body text-start ps-3">
+                  <p class="guide-label mb-1">Buying Guides</p>
+                  <h6 class="guide-title fw-bold mb-0">What do I need?</h6>
+                </div>
+              </div>
             </div>
-            <div class="product text-center">
-              <img src="./images/productslider8.avif" alt="..." />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="guide-item border border-dark rounded-4 p-2">
+            <div class="row g-0 align-items-center">
+              <div class="col-3 p-1">
+                <div class="img-frame rounded-3 overflow-hidden">
+                  <img
+                    src="Images/google,jpg.webp"
+                    class="guide-img"
+                    alt="Mobiles"
+                  />
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="card-body text-start ps-3">
+                  <p class="guide-label mb-1">Buying Guides</p>
+                  <h6 class="guide-title fw-bold mb-0">Best camera phones.</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="guide-item border border-dark rounded-4 p-2">
+            <div class="row g-0 align-items-center">
+              <div class="col-3 p-1">
+                <div class="img-frame rounded-3 overflow-hidden">
+                  <img src="Images/gaming.png" class="guide-img" alt="Gaming" />
+                </div>
+              </div>
+              <div class="col-9">
+                <div class="card-body text-start ps-3">
+                  <p
+                    class="guide-label mb-1"
+                    style="font-family: &quot;Arial Black&quot;, sans-serif"
+                  >
+                    Buying Guides
+                  </p>
+                  <h6 class="guide-title fw-bold mb-0">Gaming setups 101.</h6>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Arrows below carousel -->
-      <div class="text-center mt-3">
-        <button
-          class="btn btn-dark me-2"
-          type="button"
-          data-bs-target="#productCarousel2"
-          data-bs-slide="prev"
-        >
-          <i class="fa-solid fa-angle-left"></i>
-        </button>
-        <button
-          class="btn btn-dark"
-          type="button"
-          data-bs-target="#productCarousel2"
-          data-bs-slide="next"
-        >
-          <i class="fa-solid fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Top deals -->
-
-    <div class="main1">
-      <div class="submain1">
-        <img class="imgsubmain1" src="Images/topdeal1.avif" alt="" />
-      </div>
-      <div class="submain1">
-        <img class="imgsubmain1" src="Images/topdeals2.webp" alt="" />
-      </div>
-    </div>
-    <div class="main2">
-      <div class="submain2">
-        <img class="imgsubmain2" src="Images/topdeals3.webp" alt="" />
-      </div>
-      <div class="submain2">
-        <img class="imgsubmain2" src="Images/topdeals4.webp" alt="" />
-      </div>
-      <div class="submain2">
-        <img class="imgsubmain2" src="Images/topdeals5.webp" alt="" />
-      </div>
-    </div>
-    <!-- Mid-Section -->
-
-    <div class="midsec">
-      <img class="imgmidsec" src="Images/productslider5.avif" alt="" />
-    </div>
-
-    <!-- Buying Guide -->
-
-    <section>
-      <div class="buyingguide">
-        <p>BUYING GUIDES</p>
-        <p>Make informed purchasing decisions with confidence.</p>
-
-        <div class="buyingguide-boxes">
-          <div class="bg-box">
-            <div class="bgimg-holder">
-              <img
-                class="imgbg"
-                src="./images/productslider1.avif"
-                class="card-img-top"
-                alt="..."
-              />
-            </div>
-            <div class="bgtext">
-              <p>Buying Guides</p>
-              <p>What do I need?</p>
-            </div>
-          </div>
-          <div class="bg-box">
-            <div class="bgimg-holder">
-              <img
-                class="imgbg"
-                src="./images/productslider1.avif"
-                class="card-img-top"
-                alt="..."
-              />
-            </div>
-            <div class="bgtext">
-              <p>Buying Guides</p>
-              <p>What do I need?</p>
-            </div>
-          </div>
-          <div class="bg-box">
-            <div class="bgimg-holder">
-              <img
-                class="imgbg"
-                src="./images/productslider1.avif"
-                class="card-img-top"
-                alt="..."
-              />
-            </div>
-            <div class="bgtext">
-              <p>Buying Guides</p>
-              <p>What do I need?</p>
-            </div>
-          </div>
-        </div>
-        <button class="btnguide">View all our buying guides</button>
+      <div class="text-center mt-5">
+        <a href="#" class="btn-solid-tech"> View All Buying Guides </a>
       </div>
     </section>
-    <!-- footer -->
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section about">
-          <h2 class="footer-title">About TechVerse</h2>
-          <p>
-            TechVerse brings you the latest gadgets, gaming gear, and
-            electronics at unbeatable prices. Explore our wide collection of
-            mobiles, laptops, and accessories, All in one place.
-          </p>
-        </div>
+    <!-- ================= FOOTER ================= -->
 
-        <div class="footer-section links">
-          <h2 class="footer-title">Quick Links</h2>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
-        </div>
+    <footer
+      class="py-5 w-100"
+      style="background-color: #1a1c20; color: #adb5bd"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4
+              class="fw-bold text-white mb-3"
+              style="font-family: &quot;Arial Black&quot;, sans-serif"
+            >
+              TECHVERSE
+            </h4>
+            <p
+              class="text-white-50"
+              style="font-size: 0.95rem; line-height: 1.6"
+            >
+              TechVerse brings you the latest gadgets, gaming gear, and
+              electronics at unbeatable prices.
+            </p>
+          </div>
 
-        <div class="footer-section contact">
-          <h2 class="footer-title">Contact Us</h2>
-          <p><i class="bi bi-geo-alt-fill"></i> Pakistan</p>
-          <p><i class="bi bi-envelope-fill"></i> support@techverse.com</p>
-          <p><i class="bi bi-telephone-fill"></i> +81 90 1234 5678</p>
-        </div>
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="index.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="products.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Shop</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="about-us.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >About</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="faqs.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >FAQs</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="privacypolicy.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Privacy policy</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <div class="footer-section social">
-          <h2 class="footer-title">Follow Us</h2>
-          <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Contact</h6>
+            <p class="text-white-50 mb-2 small">
+              <i class="fa-solid fa-location-dot me-2 text-white"></i> Pakistan
+            </p>
+            <p class="text-white-50 mb-2 small">
+              <i class="fa-solid fa-envelope me-2 text-white"></i>
+              support@techverse.com
+            </p>
+            <p class="text-white-50 small">
+              <i class="fa-solid fa-phone me-2 text-white"></i> +92 309 7724475
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4 text-md-end">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Follow Us</h6>
+            <div
+              class="d-flex justify-content-center justify-content-md-end gap-2"
+            >
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-facebook-f text-white"></i>
+              </a>
+
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-instagram text-white"></i>
+              </a>
+
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-youtube text-white"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 TechVerse. All Rights Reserved.</p>
+        <hr
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+          class="my-4"
+        />
+
+        <div class="text-center small text-white-50">
+          &copy; 2025 TechVerse. All Rights Reserved.
+        </div>
       </div>
     </footer>
   </body>

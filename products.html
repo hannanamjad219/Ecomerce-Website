@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -45,272 +45,510 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-secondary">
-        <div class="container-fluid">
-          <!-- Logo on extreme left -->
-
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <div class="logo">
-              <span class="logo-circle">AH</span>
-            </div>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-dark py-3"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand fw-black fs-3"
+            href="index.html"
+            style="font-family: &quot;Arial Black&quot;, sans-serif"
+          >
+            TECHVERSE
           </a>
-          <div class="navtext">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="about-us.html">About Us</a>
-            <a href="contact-us.html">Contact Us</a>
-          </div>
 
-          <!-- Dropdown menu on extreme right -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#studioNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary border-0"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <li><a class="dropdown-item" href="#">Manage</a></li>
-              <li><a class="dropdown-item" href="#">Reward</a></li>
-              <li><a class="dropdown-item" href="#">Help</a></li>
-              <li><a class="dropdown-item" href="#">Log in</a></li>
+          <div class="collapse navbar-collapse" id="studioNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" href="products.html"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="about-us.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="contact-us.html">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <!-- Hero Section -->
-    <!-- HERO / INTRO SECTION -->
-    <div class="intro-text">
-      <h1>Welcome to TechVerse</h1>
-      <p>
-        Discover the latest gadgets, gaming gear, and electronics at unbeatable
-        prices. Fast delivery, trusted service, and top-quality products — all
-        in one place.
-      </p>
-    </div>
-    <!-- Product Section -->
-    <div class="products">
-      <!-- Row 1 -->
-      <div class="productsrows">
-        <div class="productimgs">
-          <img src="./images/deal2.avif" alt="Galaxy S24 Ultra" />
-          <h3 class="productname">Galaxy S24 Ultra</h3>
-          <p class="productprice">$999</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal3.avif" alt="MacBook Air M3" />
-          <h3 class="productname">MacBook Air M3</h3>
-          <p class="productprice">$1,199</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="PlayStation 5" />
-          <h3 class="productname">PlayStation 5</h3>
-          <p class="productprice">$499</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Dell XPS 15" />
-          <h3 class="productname">Dell XPS 15</h3>
-          <p class="productprice">$1,299</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Apple Watch Ultra 2" />
-          <h3 class="productname">Apple Watch Ultra 2</h3>
-          <p class="productprice">$799</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-      </div>
 
-      <!-- Row 2 -->
-      <div class="productsrows">
-        <div class="productimgs">
-          <img src="./images/deal2.avif" alt="iPad Pro 13" />
-          <h3 class="productname">iPad Pro 13"</h3>
-          <p class="productprice">$1,099</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal3.avif" alt="Canon EOS R6 II" />
-          <h3 class="productname">Canon EOS R6 II</h3>
-          <p class="productprice">$2,199</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Gaming Headset" />
-          <h3 class="productname">Gaming Headset</h3>
-          <p class="productprice">$129</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Mechanical Keyboard" />
-          <h3 class="productname">Mechanical</h3>
-          <p class="productprice">$99</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Samsung QLED TV" />
-          <h3 class="productname">Samsung QLED TV</h3>
-          <p class="productprice">$1,499</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-      </div>
+    <section class="products py-5">
+      <div class="custom-wide-container">
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4"
+        >
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./Images/mac1.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">MacBook Pro 14</h3>
+                <p class="productprice">$1,399</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/samlap.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Galaxy Book5 Pro</h3>
+                <p class="productprice">$1,699</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/microlap.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Surface Pro</h3>
+                <p class="productprice">$1,349</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./Images/watch1.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Galaxy Watch7</h3>
+                <p class="productprice">$249</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/watch2.jpg.webp" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Apple Watch 11</h3>
+                <p class="productprice">$399</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
 
-      <!-- Row 3 -->
-      <div class="productsrows">
-        <div class="productimgs">
-          <img src="./images/deal2.avif" alt="iPad Pro 13" />
-          <h3 class="productname">iPad Pro 13"</h3>
-          <p class="productprice">$1,099</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal3.avif" alt="Canon EOS R6 II" />
-          <h3 class="productname">Canon EOS R6 II</h3>
-          <p class="productprice">$2,199</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Gaming Headset" />
-          <h3 class="productname">Gaming Headset</h3>
-          <p class="productprice">$129</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Mechanical Keyboard" />
-          <h3 class="productname">Mechanical</h3>
-          <p class="productprice">$99</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Samsung QLED TV" />
-          <h3 class="productname">Samsung QLED TV</h3>
-          <p class="productprice">$1,499</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-      </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/watch3.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Garmin Forerunner</h3>
+                <p class="productprice">$299</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/deal3.avif" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">PS5 Slim</h3>
+                <p class="productprice">$399</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/xbox.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Xbox Series X</h3>
+                <p class="productprice">$549</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/vrset.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Meta Quest 3S</h3>
+                <p class="productprice">$379</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/samwat.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Galaxy Watch8</h3>
+                <p class="productprice">$499</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
 
-      <!-- Row 4 -->
-      <div class="productsrows">
-        <div class="productimgs">
-          <img src="./images/deal2.avif" alt="iPad Pro 13" />
-          <h3 class="productname">iPad Pro 13"</h3>
-          <p class="productprice">$1,099</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal3.avif" alt="Canon EOS R6 II" />
-          <h3 class="productname">Canon EOS R6 II</h3>
-          <p class="productprice">$2,199</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Gaming Headset" />
-          <h3 class="productname">Gaming Headset</h3>
-          <p class="productprice">$129</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Mechanical Keyboard" />
-          <h3 class="productname">Mechanical</h3>
-          <p class="productprice">$99</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Samsung QLED TV" />
-          <h3 class="productname">Samsung QLED TV</h3>
-          <p class="productprice">$1,499</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-      </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/deal2.avif" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">iPhone 17 Pro</h3>
+                <p class="productprice">$1,199</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/google.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Pixel 10 Pro</h3>
+                <p class="productprice">$799</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/sam.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">S25 Ultra</h3>
+                <p class="productprice">$999</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/fold.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Galaxy Z Fold7</h3>
+                <p class="productprice">$1,899</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/deal1.avif" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">QLED 4K TV</h3>
+                <p class="productprice">$1,499</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
 
-      <!-- Row 5 -->
-      <div class="productsrows">
-        <div class="productimgs">
-          <img src="./images/deal2.avif" alt="iPad Pro 13" />
-          <h3 class="productname">iPad Pro 13"</h3>
-          <p class="productprice">$1,099</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal3.avif" alt="Canon EOS R6 II" />
-          <h3 class="productname">Canon EOS R6 II</h3>
-          <p class="productprice">$2,199</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Gaming Headset" />
-          <h3 class="productname">Gaming Headset</h3>
-          <p class="productprice">$129</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Mechanical Keyboard" />
-          <h3 class="productname">Mechanical</h3>
-          <p class="productprice">$99</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-        <div class="productimgs">
-          <img src="./images/deal1.avif" alt="Samsung QLED TV" />
-          <h3 class="productname">Samsung QLED TV</h3>
-          <p class="productprice">$1,499</p>
-          <button class="btn btn-outline-primary btn-sm">Add to Cart</button>
-        </div>
-      </div>
-    </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/head.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">AirPods Max</h3>
+                <p class="productprice">$449</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/buds.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Galaxy Buds3 FE</h3>
+                <p class="productprice">$129</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/buds2.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">AirPods Pro 3</h3>
+                <p class="productprice">$249</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/tv.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Crystal UHD</h3>
+                <p class="productprice">$599</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/head3.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">Skullcandy Crusher</h3>
+                <p class="productprice">$169</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section about">
-          <h2 class="footer-title">About TechVerse</h2>
-          <p>
-            TechVerse brings you the latest gadgets, gaming gear, and
-            electronics at unbeatable prices. Explore our wide collection of
-            mobiles, laptops, and accessories, All in one place.
-          </p>
-        </div>
-
-        <div class="footer-section links">
-          <h2 class="footer-title">Quick Links</h2>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section contact">
-          <h2 class="footer-title">Contact Us</h2>
-          <p><i class="bi bi-geo-alt-fill"></i> Pakistan</p>
-          <p><i class="bi bi-envelope-fill"></i> support@techverse.com</p>
-          <p><i class="bi bi-telephone-fill"></i> +81 90 1234 5678</p>
-        </div>
-
-        <div class="footer-section social">
-          <h2 class="footer-title">Follow Us</h2>
-          <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/desktop.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">
+                  CyberPowerPC AMD Ryzen 7 9800X3D Gaming Desktop with GeForce
+                  RTX 5090
+                </h3>
+                <p class="productprice">$3,699</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/chair.png" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">
+                  Anda Seat Kaiser 3 Series Premium Chair
+                </h3>
+                <p class="productprice">$300</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/monitor.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">
+                  Lenovo L27Q-4A 27 inch, 2K QHD, Monitor
+                </h3>
+                <p class="productprice">$199</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/jbl.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">
+                  JBL Live 770NC Noise Cancelling Headphones
+                </h3>
+                <p class="productprice">$159</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="product-card">
+              <div class="product-img-frame">
+                <img src="./images/monitor2.jpg" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3 class="productname">
+                  LG UltraWide 34WR50QK-B LED Curved 34 Inch Monitor
+                </h3>
+                <p class="productprice">$299</p>
+                <button class="btn-buy">Add to Cart</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 TechVerse. All Rights Reserved.</p>
+    <!-- ================= FOOTER ================= -->
+
+    <footer
+      class="py-5 w-100"
+      style="background-color: #1a1c20; color: #adb5bd"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4
+              class="fw-bold text-white mb-3"
+              style="font-family: &quot;Arial Black&quot;, sans-serif"
+            >
+              TECHVERSE
+            </h4>
+            <p
+              class="text-white-50"
+              style="font-size: 0.95rem; line-height: 1.6"
+            >
+              TechVerse brings you the latest gadgets, gaming gear, and
+              electronics at unbeatable prices.
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="index.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="products.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Shop</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="about-us.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >About</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="faqs.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >FAQs</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="privacypolicy.html"
+                  class="text-white-50 text-decoration-none footer-link"
+                  >Privacy policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Contact</h6>
+            <p class="text-white-50 mb-2 small">
+              <i class="fa-solid fa-location-dot me-2 text-white"></i> Pakistan
+            </p>
+            <p class="text-white-50 mb-2 small">
+              <i class="fa-solid fa-envelope me-2 text-white"></i>
+              support@techverse.com
+            </p>
+            <p class="text-white-50 small">
+              <i class="fa-solid fa-phone me-2 text-white"></i> +92 309 7724475
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4 text-md-end">
+            <h6 class="text-uppercase fw-bold text-white mb-3">Follow Us</h6>
+            <div
+              class="d-flex justify-content-center justify-content-md-end gap-2"
+            >
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-facebook-f text-white"></i>
+              </a>
+
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-instagram text-white"></i>
+              </a>
+
+              <a
+                href="#"
+                class="social-icon-box d-flex align-items-center justify-content-center text-decoration-none"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  background-color: #33363b;
+                  border-radius: 8px;
+                  transition: 0.3s;
+                "
+              >
+                <i class="fa-brands fa-youtube text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr
+          style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
+          class="my-4"
+        />
+
+        <div class="text-center small text-white-50">
+          &copy; 2025 TechVerse. All Rights Reserved.
+        </div>
       </div>
     </footer>
   </body>
